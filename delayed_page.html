@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Delayed Page Load</title>
+        <link href="http://cic-qa-otacon/assets/application-7eab3dffc9de764629965a3b1c56864b.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="http://cic-qa-otacon/assets/application-908ccc9365729087a15d2d9d1db5e870.js"></script>
+    </head>
+    <body>
+        <div class="container" align="center">
+            <h2>Page Load Spinner Test</h2>
+            <p>A spinner will load here in 5 seconds.</p>
+            <img id="image1" src="http://deelay.me/5000/http://www.deelay.me/img/4.gif" alt="">
+
+            <br />
+            <br />
+
+            <div class="row text-center">
+                <a id="showSpinner2" href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Show spinner 2</a>
+            </div>
+        </div>
+
+        <div class="modal" id="basicModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img id="image2" src="http://www.deelay.me/img/4.gif" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            // Spinner 2 - Toggle visibility
+            var hidden = false;
+
+            setInterval(function(){
+                document.getElementById("basicModal").style.visibility = hidden ? "visible" : "hidden";
+                hidden = !hidden;
+                console.log("Changed")
+            }, 2500);
+        </script>
+
+    </body>
+</html>
