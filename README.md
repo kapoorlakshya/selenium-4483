@@ -1,4 +1,4 @@
-# selenium-4486
+# selenium-4483
 Test app to reproduce issue [#4483](https://github.com/SeleniumHQ/selenium/issues/4483) in Selenium.
 
 # URL in Test
